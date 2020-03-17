@@ -108,8 +108,11 @@
     color:black;background:none;
   }
 
-  .row_projbox{
-    height:95px;
+  .col_projbox {       
+    width:50%;height:33.33%;
+  }
+  .row_projbox{    
+    height:300px;width:90%;margin-left:5%;margin-right:5%;padding:0px;margin-top:0px;background:white;
   }
 
   .class_div2_box div{      

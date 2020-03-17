@@ -23,7 +23,6 @@ body {
   background-repeat: no-repeat;
   background-position: top;    
   background-size: 100%;
-
 }
 
 .class_nav{
@@ -187,11 +186,12 @@ li a:hover {
 
 .col_projbox {    
   position: relative;
-  float:left;width:33.33%;height:100%;padding:0px;border:0px solid black;background:none;
+  float:left;width:33.33%;height:50%;padding:0px;border:0px solid black;background:none;
 }
 
 .row_projbox{
-  height:330px;width:90%;margin-left:5%;margin-right:5%;padding:0px;margin-top:0px;background:white;
+  margin-top:6%; margin-bottom:6%;
+  height:670px;width:90%;margin-left:5%;margin-right:5%;padding:0px;margin-top:0px;background:white;
 }
 
 .class_div1 {
