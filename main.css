@@ -78,7 +78,8 @@ li a:hover {
 .class_head{
   display: block;  
   border:1px solid lightgray;
-  width:100%;height:60px;padding:10px;background:#3396FF;
+  width:100%;height:60px;padding:10px;
+  color:white;background:#3396FF;
   font-weight:bold;font-size:33px;
 }
 
