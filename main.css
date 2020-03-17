@@ -1,0 +1,326 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 25px;
+  color:black;
+  min-height:100%;
+  margin:0;
+  padding:0; 
+  background-color:#F0F0F0; 
+  font-family: Helvetica, 'Trebuchet MS', Tahoma, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+#wrapper{
+  width:1100px;height:auto;
+  margin:0 auto;
+
+  background-image: url('gfx/simala.jpg'); 
+  background-repeat: no-repeat;
+  background-position: top;    
+  background-size: 100%;
+
+}
+
+.class_nav{
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0px;
+  width: 100%;
+
+  z-index: 200;
+  /**************/
+  height:60px;
+  font-size: 26px;
+  background-color:none;
+  
+}
+    ul {  
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;  
+      float:right;
+      height: 100%;
+      border:1px solid black;      
+    }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+
+.active {
+  background-color: #4CAF50;
+  
+}
+
+#divider{
+  height:50px;
+  font-size:28px;
+  margin-bottom: 5%;
+}
+.class_head{
+  display: block;  
+  border:1px solid lightgray;
+  width:100%;height:60px;padding:10px;background:#3396FF;
+  font-weight:bold;font-size:33px;
+}
+
+.class_section{
+  display: block;  
+  height: auto;
+  width:100%;
+  border:1px solid lightgray;  
+  padding:20px;color:gray;background-color:white;
+  margin-bottom: 5%;
+}
+.sec1 {  
+  width:100%;  
+  text-indent: 50px;text-align: justify;  text-justify: inter-word;
+  padding:20px;color:gray;background-color:none;
+}
+
+#div_sec2{
+  width:100%;height:230px;margin-bottom:2%;
+}
+.sec2 {
+  float:left;
+  width:47%;  height:100%;
+  margin-left:2%;
+  padding:10px;
+  border:1px solid lightgray;
+  color:black;background:none;
+}
+
+#home{
+  font-size:25px;
+  padding:10px 0 0 10px;
+  height:110px;
+  width:100%;  
+}
+
+#myImg{ 
+  height:600px;
+}
+#jfooter{
+  font-size: 14px;
+}
+    #l_foot{
+      width:50%;text-align:left;
+    }
+    #r_foot{
+      width:50%;text-align:right;
+      float:right;
+    }
+    
+  #c_foot{
+    padding:0px;
+  }
+
+.Library {
+  transition: 01s;
+  background:red;
+  /*
+  background-image: url('gfx/jdele.png'); background-repeat: no-repeat;
+  height: 180px;
+  width: 180px;
+  */
+  border:10px solid white;
+  border-radius:50%;
+  margin:0 auto;width:300px;height:300px;
+}
+.Library div{
+  color:white;
+  transition: 01s;
+  margin-top: 40%;
+  background:yellow;
+}
+  .Library:hover {
+      transition: 01s;
+      /* background-image: url('gfx/jsave.png'); */
+      border-radius:10%;      
+  }
+  .Library:hover div{
+    color:gold;
+    transition: 01s;
+    content:'XXXXXXXXX';
+  }
+#div_lib{ 
+  height:350px;
+}
+
+#dtl_divImg{ 
+  height:77%;
+}
+#dtl_txt{ 
+  height:14%;
+  font-size:18px;
+  overflow: auto;  
+  background:white;
+}
+#dtl_siteBox{
+  width:100%;height:9%;padding:10px;background:white;
+}
+.dtl_site{
+  float:left;width:auto;height:100%;color:white;font-size:18px;padding:5px 12px 0px 12px;cursor:pointer;background:#3396FF;
+}
+#dtl_close{
+  float:right;width:auto;height:100%;padding:0px 0 0 0;font-weight:bold;text-align:right;cursor:pointer;color:gray;font-size:30px;background:none;
+}
+
+.col_projbox {    
+  position: relative;
+  float:left;width:33.33%;height:100%;padding:0px;border:0px solid black;background:none;
+}
+
+.row_projbox{
+  height:330px;width:90%;margin-left:5%;margin-right:5%;padding:0px;margin-top:0px;background:white;
+}
+
+.class_div1 {
+  width: 100%;
+  height: 100%;  
+  
+  padding:2px;display: flex; align-items: center;
+  justify-content: center;  
+  border:1px solid #F0F0F0;
+}
+
+.class_div2 {  
+  position :absolute;
+  background-color: white;
+  top: -3px;
+  top:0px;
+  z-index: 5;
+  /*
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  */  
+  width: 100%;  
+  margin: auto;  
+  transition: 0.5s;  
+  padding-top: 0px;    
+  overflow: hidden;
+  opacity:1;
+  height:0px;
+  bottom: 0px; 
+}
+
+.class_div1:hover + .class_div2 {    
+  border-top: none;
+  top: 0px;
+  height: 100%;
+}
+
+.class_div1_img{
+  width:auto;max-width:100%;height:auto;max-height:100%;
+}
+
+.class_div2:hover {
+  
+  height: 100%;     
+}
+/********div2 box***********/
+.class_div2_box{
+  width:100%;height:100%;text-align: center;
+  background:none;
+}
+    .class_div2_box div{      
+      margin-top:50px;
+      font-size:33px;
+      width:100%;height:auto;      
+      color:black; font-weight: bold;
+      background:none;
+    }
+    .class_div2_box p{    
+      width:100%;height:auto;  
+      font-size:18px;
+      color:#3396FF;
+      margin-top:0px;
+      background:none;
+    }
+    .class_div2_box h6 {    
+      margin-top:40px;
+      width:100%;height:50px;  
+      padding:5px;
+      font-size:18px; font-weight:normal;
+      color:black;
+      background:none;
+    }
+    .class_div2_box button{  
+      margin-top:0px;
+      margin:0px;
+      width:150px;height:auto;    
+      color:gray;
+      border:2px solid #3396FF;
+      padding:10px; font-size: 20px;
+      cursor: pointer;
+      background: none;
+    }
+
+    .class_div2_box button:hover {        
+      color:white;      
+      background: #3396FF;
+    }
+
+    .class_div2_box button:active {        
+      color:white;      
+      background: red;
+    }    
+
+/********class view***********/
+.modal {  
+  position: fixed;
+  transition: 0.5s;  
+  z-index: 500;
+  left: 0;
+  top: 0;
+  height: 0%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);  
+
+  margin: auto;  
+  padding-top: 0px;    
+  overflow: hidden;
+  opacity:1;
+  height:0px;
+  bottom: 0px; 
+}
+
+.modal-content{
+  background-color: #f4f4f4;  
+  box-shadow: 0px 0px 1px;
+  border:1px solid black;
+  /* margin: 30% auto;  */
+  width: 500px;height:600px;
+  
+  position: absolute;
+  margin: auto;  
+  overflow: hidden;
+  opacity:1;
+  bottom:0%; 
+  
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.5s;  
+
+}

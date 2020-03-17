@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="theme-color" content="#a9a9a9"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>My Portfolio</title>
+<link rel="shortcut icon" href="gfx/favicon.ico">
+<link rel="icon" href="gfx/favicon.ico">
+<link rel="apple-touch-icon" href="gfx/apple-touch-icon.png">
+<meta name="description" content="An awesome site that showcases my work!">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="mobile.css">
+
+<script>
+
+  function show_proj(img,dtl,site){
+    document.body.style.overflowY='hidden';
+
+    document.getElementById('div_view').setAttribute('data-site',site);
+    document.getElementById('div_view').style.height='100%';
+    document.getElementById('dtl_img').src=img;
+    document.getElementById('dtl_txt').innerHTML=dtl;    
+    if(site==''){
+      document.getElementById('dtl_site').style.display='none';
+    }else{
+      document.getElementById('dtl_site').style.display='block';      
+    }
+  }
+  
+  function goSite(){
+    var sss=document.getElementById('div_view').getAttribute('data-site');
+    window.open('https://'+sss);
+  }
+
+  function show_close(){
+    document.body.style.overflowY='auto';
+    document.getElementById('div_view').style.height='0%';
+  }
+</script>
+</head>
+
+<body>
+  <div id="div_view" data-site="" class="modal" style="height:0px;">    
+    <div class="modal-content">
+      
+      <div id="dtl_view" style="width:100%;height:100%;background:none;">
+
+        <div id="dtl_divImg" style="width:100%;display: flex; align-items: center; justify-content: center; background:darkgray;">
+          <img id="dtl_img" src="" style="width:90%;"/>
+        </div>
+
+        <div id="dtl_txt" style="width:100%;padding:10px;color:gray;"></div>
+
+        <div id="dtl_siteBox">
+          <div id="dtl_site" class="dtl_site" onclick="goSite()">&#9714; VIEW SITE</div>          
+          <div id="dtl_close" onclick="show_close()">&times;</div>
+        </div>     
+
+      </div>
+      
+    </div>	
+  </div>  
+  
+  <div id="wrapper">
+    
+    <div id="home">
+        <div style="font-weight: bold;width:100%;color:white;">Hi! I'm Jeffrey B. Enad</div>
+        <span style="height:auto;">A User Experience Designer and Full-stack Web Developer.</span>    
+    </div>
+
+    <div class="class_nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>  
+
+    <div id="myImg" style="padding:0px;width:100%;">        
+      <img src="gfx/jbe2.png" alt="Placeholder image" style="height:100%;background:none;" />
+    </div>
+    <div id="divider" style="width:100%;height:auto;padding:10px 0 0 0;background:#F0F0F0;">
+        I'm a Freelance Web Designer & Developer based in Bacolod City, Philippines.
+        Highly experienced in designing & developing custom websites.
+    </div>    
+
+    <div id="project" class="class_head">Projects</div>   
+    
+    <!--row1-->
+    <div class="row_projbox" style="margin-top:6%;">
+      <div class="col_projbox">
+        <div class="class_div1"><img id="img1" src="gfx/proj5.jpg" class="class_div1_img" alt="aidfi img"/></div>
+        <div class="class_div2">
+          <div class="class_div2_box">
+            <div>WinARIS</div>            
+            <p>Visual Basic 6</p>            
+            <h6>Accounts Receivable & Inventory System</h6>
+            <button onclick="show_proj(img1.src,'Created in 1995, this software was used by Chonlin Corp. and Sheridan Marketing Inc. for their Receivables and Inventory requirements.',
+                '')">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col_projbox">        
+        <div class="class_div1"><img id="img2" src="gfx/proj6.gif" class="class_div1_img"  alt="aidfi img"/></div>
+        <div class="class_div2">
+          <div class="class_div2_box">
+            <div>WinGAS</div>
+            <p>Visual Basic 6 / JAVA</p>
+            <h6>General Accounting System</h6>
+            <button onclick="show_proj(img2.src,'JVs, CVs, Balance Sheet, Income Statements etc. This software serves as your electronic accountant.',
+                '')">Learn More</button>
+          </div>
+        </div>      
+      </div>
+      <div class="col_projbox">        
+        <div class="class_div1"><img id="img3" src="gfx/proj1.png" class="class_div1_img" alt="aidfi img"/></div>
+        <div class="class_div2">
+          <div class="class_div2_box">
+            <div>UPDESKTOP Digital</div>
+            <p>HTML5 CSS JS PHP</p>
+            <h6>A WebApp for Digital Printing</h6>
+            <button onclick="show_proj(img3.src,'This software prints everything under the sun. You can create PVC IDs, Receipts etc. Used by UPDESKTOP Digital for its printing needs.','updesktop.000webhostapp.com')">Learn More</button>
+          </div>
+        </div>      
+      </div>
+    </div>     
+    <!--row2-->
+    <div class="row_projbox" style="margin-bottom:6%;">
+      <div class="col_projbox">        
+        <div class="class_div1"><img id="img4" src="gfx/proj2.png" class="class_div1_img" alt="aidfi img"/></div>
+        <div class="class_div2">
+          <div class="class_div2_box">
+            <div>Finding Slynth</div>
+            <p>HTML5 CSS JS PHP (PWA)</p>
+            <h6>A Family App for Travel</h6>
+            <button onclick="show_proj(img4.src,'When in travel, some of your siblings or friends might get lost. This App will tell you their current location so you can find them, and they can find you too!',
+                'jsagbayan.000webhostapp.com')">Learn More</button>
+          </div>
+        </div>  
+      </div>
+      <div class="col_projbox">        
+        <div class="class_div1"><img id="img5" src="gfx/proj3.png" class="class_div1_img" alt="aidfi img"/></div>
+        <div class="class_div2">
+          <div class="class_div2_box">
+            <div>JSTORE</div>
+            <p>HTML5 CSS JS PHP (PWA)</p>
+            <h6>An E-Commerce WebApp for Small Medium Enterprises (SME)</h6>
+            <button onclick="show_proj(img5.src,'For SME (Small Medium Enterprises), this App will let you sell your products online and interacts with your clients anytime anywhere.',
+                'updesk.heliohost.org')">Learn More</button>
+          </div>
+        </div>  
+      </div>
+      <div class="col_projbox">        
+        <div class="class_div1"><img id="img6" src="gfx/proj4.png" class="class_div1_img" alt="aidfi img"/></div>
+        <div class="class_div2">
+          <div class="class_div2_box">
+            <div>AIDFI</div>
+            <p>HTML5 CSS JS PHP (PWA)</p>
+            <h6>Ram Pump Monitoring System</h6>
+            <button onclick="show_proj(img6.src,'Created for Alternative Indigenous Development Foundation, Inc. (AIDFI). This software monitors the status of all Ram Pumps and records the water distributed.',
+                'aidfimonitoring.com')">Learn More</button>
+          </div>
+        </div>         
+      </div>
+    </div> 
+    
+    <div id="about" class="class_head">About</div>    
+    <div class="class_section">
+      <div class="sec1">
+        I am a software developer who has developed products for enterprise clients such as UPDESKTOP Digital, CAPP Industries, Sheridan Marketing Inc.,
+        Chonlin Corporation and Alternative Indigenous Development Foundation, Inc. (AIDFI), as well as many venture-backed businesses.
+        I build applications specific to the business needs of my clients. I have done work in  mobile app creation (Android and PWA), software development, front-end/back-end web, 
+        database/server management and graphic design.          
+      </div>
+  
+      <div id="div_sec2">
+        <div class="sec2">
+          <strong>Programming Languages:</strong><br>
+          Visual Basic 6<br>
+          JAVA / Android<br>
+          HTML5 CSS<br>
+          Javascript<br>
+          PHP<br>
+          MySQL<br>
+        </div>
+        <div class="sec2">
+          <strong>Graphic Softwares:</strong><br>
+          CorelDraw<br>
+          Photoshop<br>
+        </div>
+      </div>      
+    </div>
+    
+    <div id="contact" class="class_head">Contact</div>
+    <div class="class_section">      
+      <div id="div_lib" style="width:100%;padding:0px;text-align:center;background:black;">
+        <div style="float:left;width:50%;height:100%;padding:20px;text-align:center;background:pink;">
+          <div class="Library">
+            <div id="btn_1" style="height:auto;max-height:50%;">Left</div>
+          </div>
+        </div>
+        <div style="float:right;width:50%;height:100%;padding:20px;text-align:center;background:violet;">
+          <div class="Library">
+            <div id="btn_2" style="height:auto;max-height:50%;">Right</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="jfooter" style="width:100%;height:70px;margin-bottom:0px;padding:10px;color:white;background:#333;">
+      <div style="width:100%;height:65%;">
+        <div id="l_foot" style="float:left;text-decoration: none;">Email : <a href="mailto:updesktop@gmail.com" target="_blank" style="color:white;text-decoration:none;">updesktop@gmail.com</a></div>
+        <div id="r_foot">Mobile Phone : +6398-952-3337 / +63945-554-1783</div>
+      </div>
+      <div id="c_foot" style="width:100%;height:35%;text-align:center;background:black;">&copy; 2018 - Jeffrey B. Enad - All rights reserved</div>
+    </div>
+
+  </div>
+  
+</body>
+
+</html>
